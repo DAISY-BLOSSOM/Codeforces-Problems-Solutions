@@ -1,8 +1,9 @@
-//
+//https://codeforces.com/contest/236/problem/A
 
 
-#include <iostream>
- 
+#include <bits/stdc++.h>
+#define ll long long int
+#define fast_IO ios_base::sync_with_stdio(false); cin.tie(NULL);
 using namespace std;
  
 int main() {
@@ -25,4 +26,24 @@ int main() {
     }
     if(sum%2==0) cout<<"CHAT WITH HER!"<<endl;
     else cout<<"IGNORE HIM!"<<endl;
+}
+//-----------------------------------------------------------
+//*another solution using set 
+
+#include <bits/stdc++.h>
+#define ll long long int
+#define fast_IO ios_base::sync_with_stdio(false); cin.tie(NULL);
+using namespace std;
+
+int main()
+{
+    string s; cin>>s;
+    set<char> st;
+    for(int i=0;i<s.length();i++){
+        st.insert(s[i]);
+    }
+    if(st.size()%2==0) cout<<"CHAT WITH HER!";
+    else cout<<"IGNORE HIM!";
+
+    return 0;
 }
